@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# I am learning react through the use of the book 'The Road To React' by Robin Wieruch
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# These notes are just a way to see if I understand. It isn't to be taken as gospel, as I am just trying to deconstruct what's in the book and repeat back what I (think) I know.
 
-## Available Scripts
+I'll be going through each section of the book and push to GitHub as I progress.
 
-In the project directory, you can run:
+I'll be taking notes as a go, for better retention (hopefully) of the material.
 
-### `npm start`
+Fundamentals of React:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Setting up a React Project => use npx create-react-app <project name>
+  -create-react app is can be used to quickly creating a project as a starter-kit. The focus is to have a project that doesn't require a dev to spend to much time setting up a project, and instead dive straight into coding.
+  - The src/App.js is where React components are used to build out your application. Components can be broken down into their own files within src/. This provides separations of concern.
+- The React Component:
+  -A component is just a JavaScript function(or class) and can have parameters passed into it called props
+  -A component returns code that looks like HTML but is actually JSX.
+  -JSX is just a way to inject HTML with JS capabilities all bundled up.
+  -A Function component will run when it is rendered for the first time(called?) or updated at some point.
+  -Rendering means to display something in the browser.
+  **NOTE**
+  If a variable doesn't need anything from the component, it can be defined outside of the component. This will define it once, and not each time the function is called.
+  -JSX uses a camelCase version of HTML for its attributes (ex. class is className in JSX)
+  -JSX can be used to execute functions and expressions
+  -To render an array to the browser can be done using map: return arr.map(item => <p>{item}<p>)
+  -To render an item from an array of objects: return arr.map(item => <p>{item.title}<p>)
+  -This can be used to extract information to be rendered.
+  -When iterating over an array of objects and rendering them, you should use a key attribute to each list item's element. This helps if/when list items get re-ordered, they each have a unique identifier. Some data will already have this available, but it should be best practice to assign one if none are given.
+  -Null is allowed in JSX and is used if/when you don't want anything rendered.
+  -Component Hierarchies:
+  -App is the root component because it renders all other components that makeup the application
+  -The other components that are rendered by App are children components, and they can themselves be parent components of components they render.
+  -A component is considered a leaf component when it doesn't render any components.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+Pausing where note taking needs to pick back up:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# React Definition
